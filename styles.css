@@ -690,7 +690,8 @@ margin:0 auto;
   .topbar{display:flex;}
   .main{padding:16px 14px 32px;}
   .page-title{font-size:20px;}
-  .grid-4{grid-template-columns:1fr 1fr;}
+ .grid-4{grid-template-columns:1fr;}
+ .grid-3{grid-template-columns:1fr;}
 }
 @media(min-width:769px){
   .hamburger{display:none;}
