@@ -724,3 +724,10 @@ margin:0 auto;
 .grid-4 {
   grid-template-columns: 1fr !important;
 }
+.card {
+  width: 100% !important;
+}
+
+.tbl {
+  width: 100% !important;
+}
