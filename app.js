@@ -337,7 +337,7 @@ function renderOptique() {
   </div>
 
   ${C.sectionTitle(isEN?'2. Total Internal Reflection':'2. Réflexion Totale Interne', isEN?'🔴 EXAM PRIORITY':'🔴 EXAM PRIORITAIRE')}
-  <div class="grid-2 mb-16">
+  <div class="flex flex-col mb-16">
     <div class="card card--green mb-0">
       <div class="card-label">${isEN?'Critical angle (n₁ < n₂)':'Angle limite (n₁ < n₂)'}</div>
       ${C.formula('sin(l) = n₁ / n₂', 'ar-l1', isEN?'Critical angle of refraction':'Angle limite de réfraction')}
@@ -389,7 +389,7 @@ function renderOptique() {
 
   ${C.sectionTitle(isEN?'5. Parallel-Face Plate':'5. Lame à Faces Parallèles')}
   <div class="card">
-    <div class="grid-2">
+    <div class="flex flex-col">
       <div>
         <div class="card-label">${isEN?'Lateral displacement d₁':'Déplacement latéral d₁'}</div>
         ${C.formula("d₁ = e · sin(i−r) / cos(r)", 'ar-lame1', isEN?'Lateral displacement parallel plate':'Déplacement latéral lame')}
@@ -495,7 +495,7 @@ function renderRayonnement() {
   ${C.sectionTitle(isEN?'3. Nuclear Structure':'3. Structure Nucléaire')}
   <div class="card">
     ${C.formula('ᴬ𝗭X : A = Z + N', 'ar-nuc', isEN?'Nuclear notation ᴬ𝗭X':'Notation nucléaire ᴬ𝗭X')}
-    <div class="grid-2 mt-8">
+    <div class="flex flex-col mt-8">
       <div>
         <div class="card-label">${isEN?'Particle masses':'Masses des particules'}</div>
         <table class="tbl">
@@ -564,7 +564,7 @@ function renderRayonnement() {
 
   ${C.sectionTitle(isEN?'7. Physical Constants':'7. Constantes Physiques')}
   <div class="card">
-    <div class="grid-2">
+    <div class="flex flex-col">
       <div>
         <div class="card-label">${isEN?'Fundamental constants':'Constantes fondamentales'}</div>
         <table class="tbl">
@@ -1128,7 +1128,7 @@ const Diagnostic = (() => {
       const res = await AI.analyzeDiagnostic(ok, 5, errors, Lang.get());
       const resultEl = document.getElementById('diag-result');
       document.getElementById('diag-result-content').innerHTML = `
-        <div class="grid-2 mb-16">
+        <div class="flex flex-col mb-16">
           ${C.stat(ok+'/5', Lang.t('ia.diag_score'), pct>=80?'var(--green)':pct>=60?'var(--amber)':'var(--red)')}
           ${C.stat(pct+'%', Lang.t('ia.diag_success'), 'var(--cyan)')}
         </div>
